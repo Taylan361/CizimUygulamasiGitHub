@@ -24,7 +24,6 @@ Bu uygulama aşağıdaki temel işlevleri yerine getirmek üzere geliştirilmiş
 
 * **Android Uygulaması:**
     * Dil: Kotlin
-    * Mimarî: (Belirtilmediyse boş bırakılabilir veya MVVM vb. yazılabilir)
     * Temel Kütüphaneler:
         * OkHttp (Ağ istekleri için)
         * Gson (JSON işleme için)
