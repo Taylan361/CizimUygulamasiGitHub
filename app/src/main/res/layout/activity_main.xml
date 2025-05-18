@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextUserId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="User ID Girin"
+        android:inputType="text"
+        android:autofillHints="username"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLoad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Yükle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextUserId"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSave" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Kaydet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonLoad"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/controlsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/buttonColorBlack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/black"
+                android:contentDescription="Siyah Renk" />
+
+            <ImageButton
+                android:id="@+id/buttonColorRed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/holo_red_dark"
+                android:contentDescription="Kırmızı Renk" />
+
+            <ImageButton
+                android:id="@+id/buttonColorBlue"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="4dp"
+                android:background="@android:color/holo_blue_dark"
+                android:contentDescription="Mavi Renk" />
+
+            <ImageButton
+                android:id="@+id/buttonColorGreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/holo_green_dark"
+                android:contentDescription="Yeşil Renk" />
+
+            <ImageButton
+                android:id="@+id/buttonEraser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="@android:color/darker_gray"
+                android:contentDescription="Silgi" />
+
+            <ImageButton
+                android:id="@+id/buttonAddText"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_edit"
+                app:tint="@android:color/darker_gray"
+                android:contentDescription="Metin Ekle" />
+
+            <ImageButton
+                android:id="@+id/buttonExportPdf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:src="@android:drawable/ic_menu_save"
+                app:tint="@android:color/darker_gray"
+                android:contentDescription="PDF Olarak Kaydet" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalınlık/Boyut:"
+                android:layout_marginEnd="8dp"/>
+
+            <SeekBar
+                android:id="@+id/seekBarStrokeWidth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="15" />
+
+            <TextView
+                android:id="@+id/textViewStrokeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:layout_marginStart="8dp"
+                android:minWidth="24dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.example.cizimuygulamasi.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F0F0F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/controlsLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
