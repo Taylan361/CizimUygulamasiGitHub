@@ -1,51 +1,76 @@
-<<<<<<< HEAD
+# IntelliJ IDEA / Android Studio
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
-=======
-# Gradle files
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+navEditor.xml
+assetWizardSettings.xml
+caches/ # .idea/caches yerine daha genel
+libraries/ # .idea/libraries yerine daha genel
+modules.xml # .idea/modules.xml yerine daha genel
+workspace.xml # .idea/workspace.xml yerine daha genel (bazen .idea/workspace/ da olabilir)
+
+# Gradle
 .gradle/
 build/
 
 # Local configuration file (sdk path, etc)
 local.properties
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
+# Captures directory
 captures/
+
+# External native build directory
 .externalNativeBuild/
 .cxx/
+
+# Binaries
 *.apk
+*.aab
+*.ap_
 output.json
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
+# Keystores
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
+# Google Services file
 google-services.json
+
+# Log Files
+*.log
 
 # Android Profiling
 *.hprof
->>>>>>> 28cdc75413c9e1163a4fed2406cb85e052136c1b
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Python / Flask
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+venv/
+env/
+instance/ 
+.env 
+
+# Kendi eklediğimiz Flask sunucusu için (server/ klasörü altında)
+server/__pycache__/
+server/*.sqlite 
+server/instance/
+server/.env
+
+# Kullanıcı çizimlerini ve PDF çıktılarını repoya ekleme
+# Sadece boş klasör yapısı veya .gitkeep dosyası eklensin
+server/user_drawings/*
+!server/user_drawings/.gitkeep
+
+# Android Studio cache/log files that might be in the root
+# (Eğer proje kökünde oluşuyorlarsa)
+# .idea/caches/
+# .idea/log/
+# service.iml (Eğer varsa ve proje yapısına göre)
